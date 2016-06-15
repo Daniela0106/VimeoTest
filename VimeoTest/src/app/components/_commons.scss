@@ -1,0 +1,66 @@
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 65em;
+// breakpoints
+$breakpoint-small: "only screen and (min-width: 20em)";
+$breakpoint-medium: "only screen and (min-width: 30em)";
+//Setting up the responsive grid layout design
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+#categoryContainer{
+  background: linear-gradient(#6F60A1,#4C3F75);
+  height:100%;
+  border-right: 1px solid black;
+
+}
+#videoContainer{
+  background: linear-gradient(#FAFAFA,#FFFFFF);
+  height:100%;
+}
+#logo{
+  height:30%;
+  width:30%;
+}
+
+/*
+Pagination
+*/
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination li:first-child a {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+ul.pagination li a.active {
+  background-color: #7061A2;
+  color: white;
+  border: 1px solid #337AB7;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
