@@ -21,3 +21,7 @@ body:before {
   white-space: pre;
   font-family: monospace;
   content: "Errno::ENOENT: No such file or directory - scss"; }
+
+@import "../src/app/components/commons";
+@import "../src/app/components/mixins";
+@import "../src/app/components/variables";
