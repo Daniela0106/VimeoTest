@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22b71cdb-fcd9-47fa-aa53-8c0b71b9e7f9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VimeoTest/src/app/javascript/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VimeoTest/src/app/style/partials/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VimeoTest/src/app/style/style.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/VimeoTest/src/assets/favicon.ico" afterPath="$PROJECT_DIR$/VimeoTest/src/favicon.ico" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/VimeoTest/src/assets/index.html" afterPath="$PROJECT_DIR$/VimeoTest/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VimeoTest/src/app/style/partials/_variables.scss" afterPath="$PROJECT_DIR$/VimeoTest/src/app/style/partials/_variables.scss" />
     </list>
     <ignored path="VimeoTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,8 +50,8 @@
       <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VimeoTest/src/app/style/partials/_variables.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="224">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,6 +79,7 @@
         <option value="$PROJECT_DIR$/VimeoTest/src/app/javascript/app.js" />
         <option value="$PROJECT_DIR$/VimeoTest/src/index.html" />
         <option value="$PROJECT_DIR$/VimeoTest/src/app/style/style.sass" />
+        <option value="$PROJECT_DIR$/VimeoTest/src/app/style/partials/_variables.scss" />
       </list>
     </option>
   </component>
@@ -365,12 +361,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466007503490</updated>
-      <workItem from="1466007504564" duration="6890000" />
+      <workItem from="1466007504564" duration="7148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6890000" />
+    <option name="totallyTimeSpent" value="7148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="262" y="23" width="1426" height="977" extended-state="0" />
@@ -533,8 +529,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VimeoTest/src/app/style/partials/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="224">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
