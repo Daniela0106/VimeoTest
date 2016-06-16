@@ -1,7 +1,24 @@
+#upperBarContainer{
+  display:none;
+}
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
+  }
+  #categoryContainer{
+    display: none;
+  }
+  #upperBarContainer{
+    padding: 10px;
+    display: block;
+  }
+  #searchInput{
+    padding-top: 10px;
+    border-radius: 25px;
+  }
+  .pagination{
+   width: auto;
   }
 }
 #categoryContainer{
@@ -10,26 +27,22 @@
   border-right: 1px solid black;
 }
 #videoContainer{
-  background: linear-gradient(#FAFAFA,#FFFFFF);
+  background: white;
   height:100%;
 }
 #logo{
   height:30%;
   width:30%;
 }
-
-/*
-Pagination
-*/
-
+#whiteWindow{
+  background-color: #FFFFFF;
+}
 ul.pagination {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
-
 ul.pagination li {display: inline;}
-
 ul.pagination li a {
   color: black;
   float: left;
@@ -38,21 +51,23 @@ ul.pagination li a {
   transition: background-color .3s;
   border: 1px solid #ddd;
 }
-
 .pagination li:first-child a {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-
 .pagination li:last-child a {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
 ul.pagination li a.active {
   background-color: #7061A2;
   color: white;
   border: 1px solid #337AB7;
 }
-
 ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+.gray{
+  color: #A3A3A3;
+}
+.grayWindow{
+  background: linear-gradient(#FAFAFA,#EEEEEE);
+}
