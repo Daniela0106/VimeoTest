@@ -25,9 +25,15 @@
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-    <script src="../bower_components/angular/angular.js"></script>
     <script src="../app/main/main.html"></script>
-    <link rel="stylesheet" href="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js">
+
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- Loading app file-->
+    <script src="../app/main/main.controller.js"></script>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -43,7 +49,7 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body class="grayWindow" ng-app="vimeoCategories">
+  <body class="grayWindow" ng-app="vimeoProject">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
