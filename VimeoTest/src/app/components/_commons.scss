@@ -24,10 +24,10 @@
   font-family: 'AvenirNextLTPro', sans-serif;/* <-- fonts */
 }
 
-#hamburger{
+.hamburger{
   display:none;
 }
-#searchInput{
+.searchInput{
   float: right;
   width: 300px;
   margin-top: 10px;
@@ -35,18 +35,18 @@
   border-radius: 25px;
   background: url("../searchIcon.png") no-repeat right center;
 }
-#whiteWindow{
+.whiteWindow{
   border-bottom: black 1px;
   margin-top: 60px;
   margin-bottom: 20px;
   background-color: #FFFFFF;
 }
-#author{
+.author{
   float: right;
   margin-right: 0;
 }
 @media only screen and (max-width: 1000px) {
-  #searchInput{
+  .searchInput{
     padding-top: 10px;
     border-radius: 25px;
     background: url("../searchIcon.png") no-repeat right center;
@@ -60,44 +60,44 @@
   [class*="col-"] {
     width: 100%;
   }
-  #categoryContainer{
+  .categoryContainer{
     display: none;
   }
-  #hamburger{
+  .hamburger{
     padding: 10px;
     display: block;
   }
-  #searchInput{
+  .searchInput{
     padding-top: 10px;
     border-radius: 25px;
     background: url("../searchIcon.png") no-repeat right center;
     width: auto;
   }
-  #author{
+  .author{
     margin-right: 0;
   }
   .pagination{
    width: auto;
   }
 }
-#categoryContainer{
+.categoryContainer{
   position: fixed;
   background: linear-gradient(#6F60A1,#4C3F75);
   height:100%;
   border-right: 1px solid black;
 }
-#videoContainer{
+.videoContainer{
   height:100%;
 }
-#logo{
+.logo{
   width:20%;
   height: auto;
 }
-#whiteWindow{
+.whiteWindow{
   padding-top: 10px;
   background-color: #FFFFFF;
 }
-#paginationProperties{
+.paginationProperties{
   float: right;
 }
 ul.pagination {
