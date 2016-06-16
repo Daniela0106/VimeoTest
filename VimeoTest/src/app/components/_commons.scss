@@ -6,6 +6,7 @@
   margin-top: 10px;
   padding-right: 20px;
   border-radius: 25px;
+  background: url("../searchIcon.png") no-repeat right center;
 }
 #whiteWindow{
   margin-top: 60px;
@@ -27,6 +28,7 @@
   #searchInput{
     padding-top: 10px;
     border-radius: 25px;
+    background: url("../searchIcon.png") no-repeat right center;
   }
   .pagination{
    width: auto;
@@ -82,7 +84,7 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
   background-repeat: no-repeat;
 }
 img {
-  width: 70%;
+  width:auto;
   height: auto;
   float: left;
   margin-right: 10px;
