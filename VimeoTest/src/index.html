@@ -25,6 +25,9 @@
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../app/main/main.html"></script>
+    <link rel="stylesheet" href="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -40,44 +43,13 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body class="grayWindow">
+  <body class="grayWindow" ng-app="vimeoCategories">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view>
-      <div id="categoryContainer" class="col-sm-3 col-md-3"><!--BIG BOX-->
-        <div class="container">
-        <img id="logo" alt="VimeoTest - logo" src="../bower_components/bootstrap-sass/assets/images/logo.png"/>
-        </div>
-      </div>
-      <!--DIV FOR THE UPPER MENU AND SEARCH BAR-->
-      <div id="videoContainer" class="col-sm-9 col-md-9"><!--BIG BOX-->
-        <div class="container">
-          <div class="col-sm-3 col-md-12">
-            <div class="row">
-              <span id="hamburger" class="glyphicon glyphicon-menu-hamburger gray"></span>
-              <input id="searchInput" type="text" class="form-control" placeholder="Search videos">
-            </div>
-          </div>
-          <div id="whiteWindow">
-            <br>
-            <ul class="pagination pagination-sm">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">1</a></li>
-              <li><a class="active" href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">6</a></li>
-              <li><a href="#">7</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </div>
-          <p class="author gray">Powered by Talos Digital</p>
-        </div>
-
-      </div>
+    <div class="container">
+      <div ui-view></div>
     </div>
 
 

@@ -1,4 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="videoView">
 <div class="container">
+  <div ui-view>
+    <div class="categoryContainer col-sm-3 col-md-3"><!--BIG BOX-->
+      <div class="container">
+        <img id="logo" alt="VimeoTest - logo" src="../bower_components/bootstrap-sass/assets/images/logo.png"/>
+      </div>
+    </div>
+    <!--DIV FOR THE UPPER MENU AND SEARCH BAR-->
+    <div id="videoContainer" class="col-sm-9 col-md-9"><!--BIG BOX-->
+      <div class="container">
+        <div class="col-sm-3 col-md-12">
+          <div class="row">
+            <span id="hamburger" class="glyphicon glyphicon-menu-hamburger gray"></span>
+            <input id="searchInput" type="text" class="form-control" placeholder="Search videos">
+          </div>
+        </div>
+        <div id="whiteWindow">
+          <br>
+          <ul id="paginationProperties" class="pagination pagination-sm">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">1</a></li>
+            <li><a class="active" href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+        </div>
+        <br>
+        <p class="author gray">Powered by Talos Digital</p>
+      </div>
 
-
+    </div>
+  </div>
 </div>
+</html>
