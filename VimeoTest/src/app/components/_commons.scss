@@ -7,7 +7,11 @@
   padding-right: 20px;
   border-radius: 25px;
 }
-
+#whiteWindow{
+  margin-top: 60px;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+}
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="col-"] {
@@ -34,7 +38,6 @@
   border-right: 1px solid black;
 }
 #videoContainer{
-  background: white;
   height:100%;
 }
 #logo{
@@ -42,12 +45,11 @@
   width:30%;
 }
 #whiteWindow{
+  padding-top: 10px;
   background-color: #FFFFFF;
 }
 ul.pagination {
   display: inline-block;
-  padding: 0;
-  margin: 0;
 }
 ul.pagination li {display: inline;}
 ul.pagination li a {
@@ -77,4 +79,11 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
 }
 .grayWindow{
   background: linear-gradient(#FAFAFA,#EEEEEE);
+  background-repeat: no-repeat;
+}
+img {
+  width: 70%;
+  height: auto;
+  float: left;
+  margin-right: 10px;
 }
