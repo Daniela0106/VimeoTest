@@ -1,8 +1,34 @@
 /** @ngInject */
+
+var app = angular.module('vimeo', []);
+
+app.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+    when('/main', {
+      templateUrl: 'templates/add-order.html',
+      controller: 'AddOrderController'
+    }).
+    when('/showOrders', {
+      templateUrl: 'templates/show-orders.html',
+      controller: 'ShowOrdersController'
+    }).
+    otherwise({
+      redirectTo: '/main.html'
+    });
+  }]);
+
+
+
+//THIS WORKS, BUT I'M STILL NOT LOADING THE VIDEO
+
+/**@ngInject
+
+var app = angular.module('vimeo', []);
+
 (function() {
   'use strict';
 
-  var app = angular.module('vimeo', []);
 
   app.controller('VimeoController', function () {
     this.videos = videosDetails;
@@ -22,3 +48,28 @@
   ]
 
 })();
+
+
+**/
+
+
+
+/**
+ var sampleApp = angular.module('phonecatApp', []);
+
+ sampleApp .config(['$routeProvider',
+ function($routeProvider) {
+    $routeProvider.
+      when('/addOrder', {
+        templateUrl: 'templates/add-order.html',
+        controller: 'AddOrderController'
+      }).
+      when('/showOrders', {
+        templateUrl: 'templates/show-orders.html',
+        controller: 'ShowOrdersController'
+      }).
+      otherwise({
+        redirectTo: '/addOrder'
+      });
+  }]);
+ * **/

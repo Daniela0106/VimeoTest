@@ -5,6 +5,7 @@
     <title>VimeoTest</title>
     <!-- CSS (load bootstrap) -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href=../src/app/index.scss>-->
     <!-- JS (load angular, ui-router, and our custom js file) -->
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -57,7 +58,9 @@
   <body class="grayWindow" ng-controller="VimeoController as vimeo">
   <!-- Directive: ng-controller, Controller Name: VimeoController, Alias:vimeo-->
     <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.</p>
     <![endif]-->
 
     <div class="container">
@@ -65,6 +68,7 @@
         <li class="list-group-item" ng-repeat="video in vimeo.videos">
           <p>{{video.name}}</p><br>
           <p>{{video.description}}</p>
+          <div ng-view></div>
         </li>
 
       </div>
