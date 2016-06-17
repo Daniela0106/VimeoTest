@@ -1,6 +1,6 @@
 /**
  *  This file contains the variables used in other gulp files
- *  which defines tasks
+ *  which defines tasks 
  *  By design, we only put there very generic config values
  *  which are used in several places to keep good readability
  *  of the tasks

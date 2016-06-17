@@ -1,8 +1,19 @@
 <!doctype html>
-<html>
+<html ng-app="vimeo">
   <head>
     <meta charset="utf-8">
     <title>VimeoTest</title>
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- DO NOT LOAD ANGULAR TWICE, LIKE SO:
+    <script src="../bower_components/angular/angular.min.js"></script>-->
+    <!-- Loading app file-->
+    <script src="../app/main/main.controller.js"></script>
     <meta name="description" content="Track trending videos in Vimeo by Category">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
@@ -27,13 +38,7 @@
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <script src="../app/main/main.html"></script>
 
-    <!-- CSS (load bootstrap) -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <!-- JS (load angular, ui-router, and our custom js file) -->
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <!-- Loading app file-->
-    <script src="../app/main/main.controller.js"></script>
+
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -49,13 +54,20 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body class="grayWindow" ng-app="vimeoProject">
+  <body class="grayWindow" ng-controller="VimeoController as vimeo">
+  <!-- Directive: ng-controller, Controller Name: VimeoController, Alias:vimeo-->
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <div class="container">
-      <div ui-view = "vimeoProject"></div>
+      <div ui-view = "vimeoProject">
+        <li class="list-group-item" ng-repeat="video in vimeo.videos">
+          <p>{{video.name}}</p><br>
+          <p>{{video.description}}</p>
+        </li>
+
+      </div>
 
     </div>
 

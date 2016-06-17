@@ -4,7 +4,6 @@
 
   angular
     .module('vimeoTest')
-    .constant('malarkey', malarkey)
     .constant('moment', moment);
 
 })();

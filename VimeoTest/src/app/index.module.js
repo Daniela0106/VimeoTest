@@ -2,6 +2,8 @@
   'use strict';
 
   angular
-    .module('vimeoTest', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'toastr']);
+    .module('vimeoTest', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
+      'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap',
+      'pascalprecht.translate','angularGrid', 'toastr']);
 
 })();

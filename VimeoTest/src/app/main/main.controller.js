@@ -1,15 +1,24 @@
+/** @ngInject */
 (function() {
   'use strict';
 
-  angular
-    .module('vimeoTest')
-    .controller('MainController', MainController);
+  var app = angular.module('vimeo', []);
 
-  /** @ngInject */
-  function MainController() {
-    //var vm = this;
+  app.controller('VimeoController', function () {
+    this.videos = videosDetails;
+  });
 
-  } 
-
+  var videosDetails = [
+    //Get videos from Vimeo's api
+    //But for now, just an example to check the app is working:
+    {
+      name: 'My video',
+      description: 'Blah, ici autre chose.'
+    },
+    {
+      name: 'Another video',
+      description: 'Beaucoup de choses ici maitenant s\'il vous plait!'
+    }
+  ]
 
 })();
