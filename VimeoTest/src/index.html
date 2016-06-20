@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="vimeo">
+<html ng-app="vimeo1">
   <head>
     <meta charset="utf-8">
     <title>VimeoTest</title>
@@ -37,7 +37,6 @@
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
-    <script src="../app/main/main.html"></script>
 
 
 
@@ -55,26 +54,44 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body class="grayWindow" ng-controller="VimeoController as vimeo">
+
+  <body class="gray_window" ng-controller="VimeoController as vimeo">
+
   <!-- Directive: ng-controller, Controller Name: VimeoController, Alias:vimeo-->
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser.
-        Please <a href="http://browsehappy.com/">upgrade your browser</a>
-        to improve your experience.</p>
-    <![endif]-->
-
-    <div class="container">
-      <div ui-view = "vimeoProject">
-        <li class="list-group-item" ng-repeat="video in vimeo.videos">
-          <p>{{video.name}}</p><br>
-          <p>{{video.description}}</p>
-          <div ng-view></div>
-        </li>
-
+  <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a>
+    to improve your experience.</p>
+  <![endif]-->
+    <div ui-view>
+      <div class="category_container col-sm-3 col-md-3"><!--BIG BOX-->
+        <div class="container">
+          <img class="logo" alt="VimeoTest - logo" src="../bower_components/bootstrap-sass/assets/images/logo.png"/>
+          <!-- <img class="logo" alt="VimeoTest - logo" src="../bower_components/bootstrap-sass/assets/images/logo"/>-->
+        </div>
       </div>
+      <!--DIV FOR THE UPPER MENU AND SEARCH BAR-->
+      <div class="video_container" class="col-sm-9 col-md-9"><!--BIG BOX-->
+        <div class="container">
+          <div class="col-sm-3 col-md-12">
+            <div class="row">
+              <span class="hamburger glyphicon glyphicon-menu-hamburger gray"></span>
+              <li class="list-group-item" ng-repeat="video in vimeo.videos">
+                <p>{{video.name}}</p><br>
+                <p>{{video.description}}</p>
 
-    </div>
-
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#main"></a></li>
+                </ul>
+                <div ng-view="main"></div><!--Multiple views are available in the UI Router-->
+              </li>
+              <br>
+              <p class="author gray">Powered by Talos Digital</p>
+            </div>
+            </div>
+        </div>
+      </div>
+  </div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
@@ -91,6 +108,5 @@
     <!-- angular templates will be automatically converted in js and inserted here -->
     <!-- endinject -->
     <!-- endbuild -->
-
   </body>
 </html>
