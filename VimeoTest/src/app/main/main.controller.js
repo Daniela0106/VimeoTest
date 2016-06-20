@@ -1,13 +1,13 @@
 /** @ngInject */
 
 var app = angular.module('vimeo', []);
-
+//$routeProvider is the name of the directive
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
     when('/main', {
-      templateUrl: 'templates/add-order.html',
-      controller: 'AddOrderController'
+      templateUrl: 'main.html',
+      controller: ''
     }).
     when('/showOrders', {
       templateUrl: 'templates/show-orders.html',
