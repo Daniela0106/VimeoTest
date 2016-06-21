@@ -1,39 +1,45 @@
-<html ng-app="videoView">
-<body>
-<div class="container">
   <div ui-view>
-    <div class="categoryContainer col-sm-3 col-md-3"><!--BIG BOX-->
+
+    <div class="category_container col-sm-3 col-md-3"><!--BIG BOX-->
       <div class="container">
-       <!-- <img class="logo" alt="VimeoTest - logo" src="../bower_components/bootstrap-sass/assets/images/logo"/>-->
+        <img class="logo" alt="VimeoTest - logo" src="../bower_components/bootstrap-sass/assets/images/logo.png"/>
+        <!-- <img class="logo" alt="VimeoTest - logo" src="../bower_components/bootstrap-sass/assets/images/logo"/>-->
       </div>
     </div>
     <!--DIV FOR THE UPPER MENU AND SEARCH BAR-->
-    <div class="videoContainer" class="col-sm-9 col-md-9"><!--BIG BOX-->
-
-        <div class="col-sm-3 col-md-12">
-          <div class="row">
-            <span class="hamburger glyphicon glyphicon-menu-hamburger gray"></span>
-            <input type="text" class="searchInput form-control" placeholder="Search videos">
-          </div>
-        </div>
-        <div class="whiteWindow">
+    <div class="video_container" class="col-sm-9 col-md-9"><!--BIG BOX-->
+      <div class="col-sm-3 col-md-12">
+        <div class="row">
+          <input class="search_input gray" type="text" class="form-control" placeholder="Search videos">
+          <span class="hamburger glyphicon glyphicon-menu-hamburger gray"></span>
           <br>
-          <ul class="paginationProperties pagination pagination-sm">
-            <li><a href="#">Previous</a></li>
-            <li><a href="#">1</a></li>
-            <li><a class="active" href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">Next</a></li>
-          </ul>
+          <br class="blank_space">
+          <br class="blank_space">
+          <li class="list-group-item video_display" ng-repeat="video in vimeo.videos">
+            <p>{{video.name}}</p><br>
+            <p>{{video.description}}</p>
+            <ul>
+              <li><a href="#main"></a></li>
+            </ul>
+            <div ng-view="main"></div><!--Multiple views are available in the UI Router-->
+            <div class="whiteWindow">
+              <br>
+              <ul class="paginationProperties pagination pagination-sm">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">1</a></li>
+                <li><a class="active" href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">Next</a></li>
+              </ul>
+            </div>
+          </li>
+          <br>
+          <p class="author gray">Powered by Talos Digital</p>
         </div>
-        <br>
-        <p class="author gray">Powered by Talos Digital</p>
       </div>
+    </div>
   </div>
-</div>
-</body>
-</html>

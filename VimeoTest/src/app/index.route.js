@@ -1,71 +1,23 @@
 var app = angular.module('vimeo1', ['ui.router']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/main');
 
   /**@ngInject**/
   $stateProvider
     .state('main', {
       url:'/main',
       templateUrl: 'main.html',
-      controller: 'main'
+      controller: 'mainCtrl'
     })
     .state('details', {
       url:'/details',
-      templateUrl: 'video/details.html',
-      controller: 'details'
+      templateUrl: 'details.html',
+      controller: 'detailsCtrl'
     })
-    .$stateParams('',{
+    .$stateParams('display-category',{
       url:'/main',
       templateUrl: 'main.html',
-      controller: 'main'
+      controller: 'mainCtrl'
     } )
-
 }]);
-
-
-
-
-
-
-/******PREVIOUS WORKING ANGULAR CODE********
-  .controller('MainController', MainController);
-
-
--  function MainController($timeout, webDevTec, toastr) {
-  -    var vm = this;
-  +  function MainController() {
-    +    //var vm = this;
-
-      -    vm.awesomeThings = [];
-    -    vm.classAnimation = '';
-    -    vm.creationDate = 1466010877186;
-    -    vm.showToastr = showToastr;
-
-    -    activate();
-    -
-      -    function activate() {
-        -      getWebDevTec();
-        -      $timeout(function() {
-          -        vm.classAnimation = 'rubberBand';
-          -      }, 4000);
-        -    }
-    -
-    -    function showToastr() {
-      -      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      -      vm.classAnimation = '';
-      -    }
-    -
-    -    function getWebDevTec() {
-      -      vm.awesomeThings = webDevTec.getTec();
-      -
-        -      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-          -        awesomeThing.rank = Math.random();
-          -      });
-      -    }
-  }
-})();
-View
- *
- *
- * */
