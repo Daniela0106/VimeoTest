@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('vimeoTest')
+    .module('vimeo1')
     .run(runBlock);
 
   /** @ngInject */

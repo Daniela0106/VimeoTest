@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('vimeoTest')
+    .module('vimeo1')
     .constant('moment', moment);
 
 })();

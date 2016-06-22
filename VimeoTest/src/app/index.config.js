@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('vimeoTest')
+    .module('')
     .config(config);
 
   /** @ngInject */
