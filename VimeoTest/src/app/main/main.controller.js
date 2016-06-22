@@ -1,28 +1,32 @@
+(function() {
+  'use strict';
+  angular
+    .module('Vimeo1')
+    .controller('MainController', MainController)
 
-var app = angular.module('vimeo1', ['ui.router']);
-app.controller('mainCtrl', function() {
+  /** @ngInject */
+  function MainController($state, $stateParams, /*sidenavLinks,responseVideos, vimeoConfig,*/ VideoFactory, $log) {
+    var vm = this;
+    //vm.sidenavLinks = sidenavLinks;
+    //vm.totalItems = (responseVideos && responseVideos.data) ? responseVideos.data.total : 0;
+    vm.page = $stateParams.page;
+    //vm.maxPaginatorSize = vimeoConfig.MAX_PAGINATOR_SIZE;
+    //vm.itemsPerPage = vimeoConfig.PER_PAGE;
+    //vm.videos = (responseVideos && responseVideos.data && responseVideos.data.data) ? VideoFactory.resolveVideosId(responseVideos.data.data) : [];
+    vm.angularGridoptions = {
+      cssGrid : false,
+      refreshOnImgLoad: false,
+      gridWidth: 295,
+      gutterSize: 15
+    };
 
-  //var controller: 'MainController';
-  var vm = this;
-
-  vm.thumbnail = "";
-  vm.title = 'mainCtrl';
-  vm.details = [
-    {description: 'Something, Something, Something, Something'},
-    {author: 'Ella'},
-    {numberOfViews: '2.1M'},
-    {numberOfComments: '16K'}
-  ];
-
-});
-
-
-
-
-/**
-resolve
-
-all of the directives
-
-$scope doesn't go well with vm
- **/
+    vm.goToVideo = function(videoId){
+      $state.go('main.detail', {'videoId': videoId });
+    };
+    $log.info(vm.videos);
+    vm.pageChanged = function () {
+      $state.go('.', { page: vm.page});
+    };
+    //$log.info(responseVideos);
+  }
+})();

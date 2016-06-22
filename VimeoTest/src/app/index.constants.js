@@ -1,9 +1,9 @@
-/* global malarkey:false, moment:false */
+/* global moment:false */
 (function() {
   'use strict';
 
   angular
-    .module('vimeo1')
+    .module('Vimeo1')
     .constant('moment', moment);
 
 })();
